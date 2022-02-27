@@ -1,0 +1,8 @@
+# https://docs.docker.com/compose/compose-file/
+version: "0.0.1"  
+services:
+  localstack:
+    image: localstack/localstack:0.14.2-arm64
+    ports:
+      - "4566:4566"
+      - "4571:4571"
