@@ -1,5 +1,8 @@
 " vim-bootstrap 2022-05-31 21:51:46
 
+" Custom settings
+let g:go_auto_type_info = 1
+
 "*****************************************************************************
 "" Vim-Plug core
 "*****************************************************************************
@@ -54,6 +57,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'tomasr/molokai'
+Plug 'hashivim/vim-terraform'
 
 
 if isdirectory('/usr/local/opt/fzf')
@@ -164,7 +168,7 @@ colorscheme molokai
 set wildmenu
 
 " mouse support
-set mouse=a
+set mouse=r
 
 set mousemodel=popup
 set t_Co=256
