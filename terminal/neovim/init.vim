@@ -158,7 +158,7 @@ let g:session_command_aliases = 1
 "*****************************************************************************
 syntax on
 set ruler
-set number
+set relativenumber
 
 let no_buffers_menu=1
 colorscheme molokai
@@ -168,7 +168,6 @@ colorscheme molokai
 set wildmenu
 
 " mouse support
-set mouse=r
 
 set mousemodel=popup
 set t_Co=256
