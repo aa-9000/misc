@@ -78,6 +78,22 @@ require('lazy').setup({
   'tpope/vim-commentary',
 
   'preservim/nerdtree',
+  {'romgrk/barbar.nvim',
+    init = function() vim.g.barbar_auto_setup = false end,
+    opts = {
+      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+      -- animation = true,
+      -- insert_at_start = true,
+      -- …etc.
+    icons = {
+      button = 'x',
+      filetype = {
+        enabled = false
+      },
+    },
+    },
+    version = '^1.0.0', -- optional: only update when a new 1.x version is released
+  },
 
 {
   "ray-x/lsp_signature.nvim",
@@ -542,7 +558,7 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
   -- clangd = {},
-  -- gopls = {},
+  gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
@@ -636,7 +652,7 @@ cmp.setup {
 vim.keymap.set("n", "<leader>w", ":wincmd w<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>x", ":bp<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>z", ":bn<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>n", ":NERDTree<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>n", ":NERDTreeToggle<CR>", { noremap = true })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
